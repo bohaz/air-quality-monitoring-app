@@ -13,8 +13,6 @@ function Details() {
     dispatch(fetchAirData(stateName));
   }, [dispatch, stateName]);
 
-  console.log('Air Data:', airData); // Log the fetched air data
-
   if (airStatus === 'loading') {
     return <div>Loading...</div>;
   }
