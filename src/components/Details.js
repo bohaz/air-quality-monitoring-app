@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchAirData } from '../redux/airSlice';
 
@@ -26,6 +26,7 @@ function Details() {
 
   return (
     <div>
+      <Link to="/">← Volver</Link>
       <h2>
         Detalles de
         {' '}
