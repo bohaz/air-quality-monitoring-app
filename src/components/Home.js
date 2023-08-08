@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import '../styles/Card.css';
 
 const states = [
   'Amazonas',
@@ -10,7 +11,6 @@ const states = [
   'Bolívar',
   'Carabobo',
   'Cojedes',
-  'Delta Amacuro',
   'Falcón',
   'Guárico',
   'Lara',
@@ -39,20 +39,21 @@ function Home() {
 
   return (
     <div>
-      <h1>Estados de Venezuela</h1>
+      <h1>Venezuela</h1>
       <input
+        style={{ padding: '10px', borderRadius: '4px', marginBottom: '10px' }}
         type="text"
-        placeholder="Filtrar por nombre..."
+        placeholder="Filter by state name..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <ul>
+      <div>
         {filteredStates.map((state) => (
-          <li key={state}>
+          <div key={state} className="card">
             <Link to={`/details/${state}`}>{state}</Link>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

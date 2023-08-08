@@ -10,25 +10,24 @@ function Details() {
   const airStatus = useSelector((state) => state.air.status);
 
   useEffect(() => {
-    console.log('Dispatching fetch for:', stateName);
     dispatch(fetchAirData(stateName));
   }, [dispatch, stateName]);
 
   console.log('Air Data:', airData); // Log the fetched air data
 
   if (airStatus === 'loading') {
-    return <div>Cargando...</div>;
+    return <div>Loading...</div>;
   }
 
   if (airStatus === 'failed') {
-    return <div>Error al cargar los datos.</div>;
+    return <div>Error loading data.</div>;
   }
 
   return (
-    <div>
-      <Link to="/">← Volver</Link>
+    <div className="card">
+      <Link to="/">← Back</Link>
       <h2>
-        Detalles de
+        Details of
         {' '}
         {stateName}
       </h2>
@@ -57,7 +56,7 @@ function Details() {
           </p>
         </div>
       ) : (
-        <p>No hay datos disponibles.</p>
+        <p>No data available.</p>
       )}
     </div>
   );

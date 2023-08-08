@@ -10,14 +10,12 @@ const initialState = {
 const API_KEY = 'abaa07642505571f2a6cee8a00d4ec9a';
 
 export const fetchAirData = createAsyncThunk('air/fetchAirData', async (location) => {
-  // Primero obtenemos las coordenadas
   const response = await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${location},VE&limit=5&appid=${API_KEY}`);
-  const { lat, lon } = response.data[0];
-  console.log(`Fetching air data for ${location} with lat: ${lat} and lon: ${lon}`);
 
-  // Luego obtenemos los datos de contaminación del aire usando esas coordenadas
+  const { lat, lon } = response.data[0];
+
   const airData = await axios.get(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${API_KEY}`);
-  console.log('Air Data Response:', airData.data);
+
   return airData.data;
 });
 
