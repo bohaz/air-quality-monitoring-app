@@ -1,6 +1,53 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Card.css';
+import Amazonas from '../assets/stateImages/Amazonas.png';
+import Anzoátegui from '../assets/stateImages/Anzoategui.png';
+import Apure from '../assets/stateImages/Apure.jpg';
+import Aragua from '../assets/stateImages/Aragua.jpg';
+import Barinas from '../assets/stateImages/Barinas.jpg';
+import Bolívar from '../assets/stateImages/bolivar.jpg';
+import Carabobo from '../assets/stateImages/Carabobo.jpg';
+import Cojedes from '../assets/stateImages/Cojedes.jpg';
+import Falcón from '../assets/stateImages/Falcon.jpg';
+import Guárico from '../assets/stateImages/Guarico.jpg';
+import Lara from '../assets/stateImages/Lara.jpg';
+import Mérida from '../assets/stateImages/Merida.jpg';
+import Miranda from '../assets/stateImages/Miranda.jpg';
+import Monagas from '../assets/stateImages/Monagas.jpg';
+import Nueva from '../assets/stateImages/NuevaEsparta.jpg';
+import Portuguesa from '../assets/stateImages/Portuguesa.jpg';
+import Sucre from '../assets/stateImages/Sucre.jpg';
+import Táchira from '../assets/stateImages/Tachira.jpg';
+import Trujillo from '../assets/stateImages/Trujillo.jpg';
+import Vargas from '../assets/stateImages/Vargas.jpg';
+import Yaracuy from '../assets/stateImages/Yaracuy.jpg';
+import Zulia from '../assets/stateImages/Zulia.jpg';
+
+const imageMap = {
+  Amazonas,
+  Anzoátegui,
+  Apure,
+  Aragua,
+  Barinas,
+  Bolívar,
+  Carabobo,
+  Cojedes,
+  Falcón,
+  Guárico,
+  Lara,
+  Mérida,
+  Miranda,
+  Monagas,
+  Portuguesa,
+  'Nueva Esparta': Nueva,
+  Sucre,
+  Táchira,
+  Trujillo,
+  Vargas,
+  Yaracuy,
+  Zulia,
+};
 
 const states = [
   'Amazonas',
@@ -38,18 +85,26 @@ function Home() {
   }, [searchTerm]);
 
   return (
-    <div>
+    <div className="">
       <h1>Venezuela</h1>
-      <input
-        style={{ padding: '10px', borderRadius: '4px', marginBottom: '10px' }}
-        type="text"
-        placeholder="Filter by state name..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
-      <div>
+      <div className="searchingsection">
+        <h2>Search for a state</h2>
+        <input
+          className="search"
+          style={{ borderRadius: '4px' }}
+          type="text"
+          placeholder="Filter by state name..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+      </div>
+      <div className="container-cards">
         {filteredStates.map((state) => (
-          <div key={state} className="card">
+          <div
+            key={state}
+            className="card"
+            style={{ backgroundImage: `url(${imageMap[state]})` }}
+          >
             <Link to={`/details/${state}`}>{state}</Link>
           </div>
         ))}

@@ -1,7 +1,36 @@
 .card {
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  background-size: cover;  /* La imagen cubrirá toda la tarjeta */
+  background-position: center;
   padding: 20px;
-  margin: 10px;
+  margin: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 90px;
+}
+
+.container-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* Esto crea dos columnas */
+  gap: 0;  /* No hay espacio entre las tarjetas */
+}
+
+.searchingsection {
+  background-color: #fa4f90;
+  padding: 1%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.searchingsection input {
+  width: 50%;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  padding: 1%;
+}
+
+h2 {
+  font-size: 19px;
+  font-weight: bold;
+  color: white;
 }
