@@ -3,7 +3,7 @@
 
 <div align="center">
 
-  <h3><b>Air Quality Monitoring App</b></h3>
+  <h3><b>🌍 Air Quality Monitoring App</b></h3>
 
 </div>
 
@@ -33,11 +33,13 @@
 # 📖 [Air Quality Monitoring App] <a name="about-project"></a>
 
 
-**[Air Quality Monitoring App]** This is .
+**[Air Quality Monitoring App]** This is an intuitive single Page Application (SPA) displaying real-time air pollution levels across Venezuelan states.
 
 ## 🛠 Built With <a name="built-with"></a>
 
-React, Git, and GitHub
+- React APP
+- Redux
+- Open Weather API
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -59,7 +61,6 @@ React, Git, and GitHub
 - **[Best organization]**
 - **[Professional documentation]**
 - **[Clean coding]**
-- **[Team Working]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -89,7 +90,10 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 cd my-folder
-git clone git@github.com:bohaz/air-quality-monitoring-app.git
+
+```sh
+  git clone git@github.com:bohaz/air-quality-monitoring-app.git
+```
 
 ### Install
 
