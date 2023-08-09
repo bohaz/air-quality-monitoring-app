@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchAirData } from '../redux/airSlice';
 import { imageMap } from './Home';
-import statePopulationData from '../data/populationData.json'; // Agregar este import para acceder a los datos de población
+import statePopulationData from '../data/populationData.json';
 
 function Details() {
   const { stateName } = useParams();
@@ -16,7 +16,7 @@ function Details() {
   }, [dispatch, stateName]);
 
   if (airStatus === 'loading') {
-    return <div>Loading...</div>;
+    return <div className="loading">Loading...</div>;
   }
 
   if (airStatus === 'failed') {
@@ -27,7 +27,7 @@ function Details() {
     <div className="details-container">
       <div className="card-image" style={{ backgroundImage: `url(${imageMap[stateName]})`, position: 'relative' }}>
         <div style={{
-          backgroundColor: 'rgba(0, 0, 0, 0.5)', // Esto oscurecerá la imagen
+          backgroundColor: 'rgba(0, 0, 0, 0.5)',
           position: 'absolute',
           top: 0,
           right: 0,
