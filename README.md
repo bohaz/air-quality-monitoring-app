@@ -65,7 +65,8 @@ React, Git, and GitHub
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
- Demo link is coming soon!!   
+ [Click here](https://air-quality-monitoring-app.onrender.com) to see the project's deployment.   
+ 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -88,7 +89,7 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 cd my-folder
-git clone git@github.com:bohaz/math-magicians.git
+git clone git@github.com:bohaz/air-quality-monitoring-app.git
 
 ### Install
 
@@ -158,7 +159,7 @@ You can deploy this project using:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/bohaz/math-magicians/issues).
+Feel free to check the [issues page](https://github.com/bohaz/air-quality-monitoring-app/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
