@@ -23,8 +23,11 @@ import Trujillo from '../assets/stateImages/Trujillo.jpg';
 import Vargas from '../assets/stateImages/Vargas.jpg';
 import Yaracuy from '../assets/stateImages/Yaracuy.jpg';
 import Zulia from '../assets/stateImages/Zulia.jpg';
+import Circle from '../assets/icons/circle-right-regular.svg';
+import Venezuela from '../assets/icons/Venezuela.png';
+import statePopulationData from '../data/populationData.json';
 
-const imageMap = {
+export const imageMap = {
   Amazonas,
   Anzoátegui,
   Apure,
@@ -85,10 +88,15 @@ function Home() {
   }, [searchTerm]);
 
   return (
-    <div className="">
-      <h1>Venezuela</h1>
+    <div className="app-image">
+      <img
+        className="venezuela"
+        src={Venezuela}
+        alt="venezuela"
+      />
+
       <div className="searchingsection">
-        <h2>Search for a state</h2>
+        <h2>Air Quality</h2>
         <input
           className="search"
           style={{ borderRadius: '4px' }}
@@ -98,15 +106,27 @@ function Home() {
           onChange={(e) => setSearchTerm(e.target.value)}
         />
       </div>
+
       <div className="container-cards">
         {filteredStates.map((state) => (
-          <div
-            key={state}
-            className="card"
-            style={{ backgroundImage: `url(${imageMap[state]})` }}
-          >
-            <Link to={`/details/${state}`}>{state}</Link>
-          </div>
+          <Link to={`/details/${state}`} key={state} style={{ textDecoration: 'none' }}>
+            <div
+              className="card"
+              style={{ backgroundImage: `url(${imageMap[state]})` }}
+            >
+              <img
+                className="circle-right"
+                src={Circle}
+                alt="Circle"
+              />
+              <p className="card-state-name">{state}</p>
+              <p className="population-data">
+                Population:
+                {' '}
+                {statePopulationData[state]}
+              </p>
+            </div>
+          </Link>
         ))}
       </div>
     </div>

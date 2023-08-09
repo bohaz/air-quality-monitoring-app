@@ -1,5 +1,5 @@
 .navbar {
-  background-color:#fa4f90;
+  background-color: #fa4f90;
   padding: 2% 5% 2% 5%;
   color: white;
 }
@@ -10,14 +10,27 @@
   align-items: center;
 }
 
-.navbar-logo {
-  color: white;
-  text-decoration: none;
+.navbar-title {
+  font-size: 20px;
   font-weight: bold;
-  font-size: 24px;
+}
+
+.nav__back {
+  width: 24px;
+  height: 24px;
 }
 
 .navbar-icons .icon-name {
   margin-left: 15px;
   cursor: pointer;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+}
+
+.icon-name img {
+  width: 24px;
+  height: 24px;
 }

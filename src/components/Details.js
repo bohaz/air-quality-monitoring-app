@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchAirData } from '../redux/airSlice';
+import { imageMap } from './Home';
+import statePopulationData from '../data/populationData.json'; // Agregar este import para acceder a los datos de población
 
 function Details() {
   const { stateName } = useParams();
@@ -22,40 +24,78 @@ function Details() {
   }
 
   return (
-    <div className="card">
-      <Link to="/">← Back</Link>
-      <h2>
-        Details of
-        {' '}
-        {stateName}
-      </h2>
-      {/* Check if the required properties exist before accessing them */}
-      {airData && airData.list && airData.list[0] && airData.list[0].components ? (
-        <div>
-          <p>
-            CO:
+    <div className="details-container">
+      <div className="card-image" style={{ backgroundImage: `url(${imageMap[stateName]})`, position: 'relative' }}>
+        <div style={{
+          backgroundColor: 'rgba(0, 0, 0, 0.5)', // Esto oscurecerá la imagen
+          position: 'absolute',
+          top: 0,
+          right: 0,
+          bottom: 0,
+          left: 0,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+        >
+          <h2 style={{ color: 'white' }}>{stateName}</h2>
+          <p style={{ color: 'white' }}>
+            Population:
             {' '}
-            {airData.list[0].components.co}
-          </p>
-          <p>
-            NO2:
-            {' '}
-            {airData.list[0].components.no2}
-          </p>
-          <p>
-            O3:
-            {' '}
-            {airData.list[0].components.o3}
-          </p>
-          <p>
-            SO2:
-            {' '}
-            {airData.list[0].components.so2}
+            {statePopulationData[stateName]}
           </p>
         </div>
-      ) : (
-        <p>No data available.</p>
-      )}
+      </div>
+      <div className="details-title">
+        <h2>
+          Air Quality of
+          {' '}
+          {stateName}
+        </h2>
+      </div>
+      <div className="card">
+        {airData && airData.list && airData.list[0] && airData.list[0].components ? (
+          <table className="air-details-table">
+            <tbody>
+              <tr>
+                <td>CO:</td>
+                <td>{airData.list[0].components.co}</td>
+              </tr>
+              <tr>
+                <td>NO:</td>
+                <td>{airData.list[0].components.no}</td>
+              </tr>
+              <tr>
+                <td>NO2:</td>
+                <td>{airData.list[0].components.no2}</td>
+              </tr>
+              <tr>
+                <td>O3:</td>
+                <td>{airData.list[0].components.o3}</td>
+              </tr>
+              <tr>
+                <td>SO2:</td>
+                <td>{airData.list[0].components.so2}</td>
+              </tr>
+              <tr>
+                <td>PM2.5:</td>
+                <td>{airData.list[0].components.pm2_5}</td>
+              </tr>
+              <tr>
+                <td>PM10:</td>
+                <td>{airData.list[0].components.pm10}</td>
+              </tr>
+              <tr>
+                <td>NH3:</td>
+                <td>{airData.list[0].components.nh3}</td>
+              </tr>
+            </tbody>
+          </table>
+        ) : (
+          <p>No data available.</p>
+        )}
+      </div>
     </div>
   );
 }

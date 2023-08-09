@@ -1,24 +1,41 @@
+body {
+  background-color: #fa4f90;
+}
+
 .card {
-  background-size: cover;  /* La imagen cubrirá toda la tarjeta */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-size: cover;
   background-position: center;
-  padding: 20px;
-  margin: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: 90px;
+  height: auto;
+  padding: 2%;
 }
 
 .container-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;  /* Esto crea dos columnas */
-  gap: 0;  /* No hay espacio entre las tarjetas */
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
 }
 
 .searchingsection {
   background-color: #fa4f90;
-  padding: 1%;
+  padding: 1% 5% 2% 5%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+h2 {
+  font-size: 19px;
+  font-weight: bold;
+  color: white;
+}
+
+.searchingsection h2 {
+  margin: 1%;
+  padding-right: 20px;
 }
 
 .searchingsection input {
@@ -26,11 +43,86 @@
   height: 30px;
   border-radius: 5px;
   border: none;
-  padding: 1%;
+  padding: 0 10px;
 }
 
-h2 {
-  font-size: 19px;
+h1 {
+  text-align: center;
+}
+
+.card-state-name {
+  font-size: 18px;
   font-weight: bold;
   color: white;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2px;
+  border-radius: 5px;
+  transition: color 0.3s;
+  margin-top: 30%;
+}
+
+.air-details-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.air-details-table td {
+  padding: 10px;
+  border: 1px solid #fa4f90;
+}
+
+.air-details-table tr:nth-child(even) {
+  background-color: #fa4f90;
+}
+
+.air-details-table tr:nth-child(odd) {
+  background-color: #ffcbd0;
+}
+
+.air-details-table td:first-child {
+  font-weight: bold;
+  color: white;
+}
+
+.circle-right {
+  width: 20px;
+  height: 20px;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffcbd0;
+}
+
+.card-image {
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.details-title {
+  width: 100%;
+  background-color: #fa4f90;
+  text-align: center;
+}
+
+.venezuela {
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.population-data {
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 3px;
+  border-radius: 5px;
+  transition: color 0.3s;
+  margin: 0;
 }
