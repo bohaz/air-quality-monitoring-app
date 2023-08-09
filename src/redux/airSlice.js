@@ -10,7 +10,7 @@ const initialState = {
 const API_KEY = 'abaa07642505571f2a6cee8a00d4ec9a';
 
 export const fetchAirData = createAsyncThunk('air/fetchAirData', async (location) => {
-  const response = await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${location},VE&limit=5&appid=${API_KEY}`);
+  const response = await axios.get(`https://api.openweathermap.org/geo/1.0/direct?q=${location},VE&limit=5&appid=${API_KEY}`);
 
   const { lat, lon } = response.data[0];
 
