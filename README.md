@@ -3,7 +3,7 @@
 
 <div align="center">
 
-  <h3><b>Air Quality Monitoring App</b></h3>
+  <h3><b>🌍 Air Quality Monitoring App</b></h3>
 
 </div>
 
@@ -30,14 +30,16 @@
 - [📝 License](#license)
 
 
-# 📖 [Air Quality Monitoring App] <a name="about-project"></a>
+# 📖 Air Quality Monitoring App <a name="about-project"></a>
 
 
-**[Air Quality Monitoring App]** This is .
+**Air Quality Monitoring App** is an intuitive single Page Application (SPA) displaying real-time air pollution levels across Venezuelan states.
 
 ## 🛠 Built With <a name="built-with"></a>
 
-React, Git, and GitHub
+- React APP
+- Redux
+- Open Weather API
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -59,13 +61,15 @@ React, Git, and GitHub
 - **[Best organization]**
 - **[Professional documentation]**
 - **[Clean coding]**
-- **[Team Working]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
- Demo link is coming soon!!   
+ [Click here](https://air-quality-monitoring-app.onrender.com) to see the project's deployment.   
+
+ [Click here](https://www.loom.com/share/52864436930a45d3933d0d4bca1b9a77?sid=45639b2d-7999-4c37-a8b3-5100d0796e6c) to see my video presentation.
+ 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -88,7 +92,10 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 cd my-folder
-git clone git@github.com:bohaz/math-magicians.git
+
+```sh
+  git clone git@github.com:bohaz/air-quality-monitoring-app.git
+```
 
 ### Install
 
@@ -138,7 +145,7 @@ You can deploy this project using:
 
 - GitHub: [@bohaz](https://github.com/bohaz)
 - Twitter: [@Ricardo29115571](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- LinkedIn: [LinkedIn](www.linkedin.com/in/ricardomartínez∴)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -149,6 +156,8 @@ You can deploy this project using:
 
 - [ ] **[Functionality]**
 - [ ] **[Content]**
+- [ ] **[Descktop version]**
+- [ ] **[Fetching more data]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -158,7 +167,7 @@ You can deploy this project using:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/bohaz/math-magicians/issues).
+Feel free to check the [issues page](https://github.com/bohaz/air-quality-monitoring-app/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -174,6 +183,8 @@ If you like this project let me know with a STAR!
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 We would like to thaks Microverse for giving us the oportunity to build and contribute in projects like this. 
+
+Original design idea by Nelson Sakwa on Behance.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
