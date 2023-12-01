@@ -140,15 +140,14 @@ h1 {
   background-color: #fa4f90;
   margin: auto;
   overflow: hidden;
-  
 }
 
 @media (min-width: 600px) {
   .app-container {
     max-width: 500px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-   
   }
+
   .navbar {
     max-width: 500px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
