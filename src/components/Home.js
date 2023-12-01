@@ -88,46 +88,48 @@ function Home() {
   }, [searchTerm]);
 
   return (
-    <div className="app-image">
-      <img
-        className="venezuela"
-        src={Venezuela}
-        alt="venezuela"
-      />
-
-      <div className="searchingsection">
-        <h2>Air Quality</h2>
-        <input
-          className="search"
-          style={{ borderRadius: '4px' }}
-          type="text"
-          placeholder="Filter by state name..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+    <div className="app-container">
+      <div className="app-image">
+        <img
+          className="venezuela"
+          src={Venezuela}
+          alt="venezuela"
         />
-      </div>
 
-      <div className="container-cards">
-        {filteredStates.map((state) => (
-          <Link to={`/details/${state}`} key={state} style={{ textDecoration: 'none' }}>
-            <div
-              className="card"
-              style={{ backgroundImage: `url(${imageMap[state]})` }}
-            >
-              <img
-                className="circle-right"
-                src={Circle}
-                alt="Circle"
-              />
-              <p className="card-state-name">{state}</p>
-              <p className="population-data">
-                Population:
-                {' '}
-                {statePopulationData[state]}
-              </p>
-            </div>
-          </Link>
-        ))}
+        <div className="searchingsection">
+          <h2>Air Quality</h2>
+          <input
+            className="search"
+            style={{ borderRadius: '4px' }}
+            type="text"
+            placeholder="Filter by state name..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </div>
+
+        <div className="container-cards">
+          {filteredStates.map((state) => (
+            <Link to={`/details/${state}`} key={state} style={{ textDecoration: 'none' }}>
+              <div
+                className="card"
+                style={{ backgroundImage: `url(${imageMap[state]})` }}
+              >
+                <img
+                  className="circle-right"
+                  src={Circle}
+                  alt="Circle"
+                />
+                <p className="card-state-name">{state}</p>
+                <p className="population-data">
+                  Population:
+                  {' '}
+                  {statePopulationData[state]}
+                </p>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );
